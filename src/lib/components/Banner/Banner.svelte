@@ -8,7 +8,7 @@
 
 {#key banner}
   <div class="w-full items-center flex-nowrap relative py-4 overflow-hidden">
-    <div class="rounded-2xl bg-gray-200 px-6 pt-8 pb-5 mx-5">
+    <div class="rounded-2xl {banner.bgColor} px-6 pt-8 pb-5 mx-5 duration-300">
       <div class="flex flex-col mr-auto items-start">
         <h2
           in:fly={{ duration: 300, y: 100, opacity: 0, delay: 1200 }}

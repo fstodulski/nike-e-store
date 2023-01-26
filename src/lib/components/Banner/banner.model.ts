@@ -4,6 +4,7 @@ const _bannerType = z.object({
   title: z.string(),
   subTitle: z.string(),
   img: z.string(),
+  bgColor: z.string(),
   cta: z.object({
     link: z.string(),
     label: z.string()

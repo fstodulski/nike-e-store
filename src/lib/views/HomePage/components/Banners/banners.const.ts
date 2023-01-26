@@ -5,6 +5,7 @@ export const BANNERS: Array<BannerType> = [
     title: `<span class="text-3xl font-bold">20%</span> Discount`,
     subTitle: 'on your first purchase',
     img: '/shoes/green_1.png',
+    bgColor: 'bg-gray-200',
     cta: {
       label: 'Shop now',
       link: '/products'
@@ -14,6 +15,7 @@ export const BANNERS: Array<BannerType> = [
     title: `<span class="text-3xl font-bold">10%</span> Discount`,
     subTitle: 'on your first purchase',
     img: '/shoes/yellow_1.png',
+    bgColor: 'bg-red-200',
     cta: {
       label: 'Shop now',
       link: '/products'
@@ -23,6 +25,7 @@ export const BANNERS: Array<BannerType> = [
     title: `<span class="text-3xl font-bold">4%</span> Discount`,
     subTitle: 'on your first purchase',
     img: '/shoes/red_1.png',
+    bgColor: 'bg-blue-200',
     cta: {
       label: 'Shop now',
       link: '/products'

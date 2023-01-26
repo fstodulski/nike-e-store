@@ -7,7 +7,7 @@
   let clientWidth: number;
   let isMobile: boolean;
 
-  $: isMobile = clientWidth <= 398;
+  $: isMobile = clientWidth <= 490;
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />

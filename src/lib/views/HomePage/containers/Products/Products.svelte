@@ -8,8 +8,8 @@
   $: params = $page.url.searchParams.get('category');
 </script>
 
-<section class="w-full px-5 flex flex-col mt-5 overflow-x-auto scrollbar-hide gap-10 pb-32">
-  <nav class="flex items-center gap-1">
+<section class="w-full flex flex-col mt-5 gap-10 pb-32">
+  <nav class="flex items-center gap-1 w-full pl-5 overflow-x-auto scrollbar-hide ">
     {#each $page.data.categories as category}
       <a
         href="?category={category}"
@@ -20,7 +20,7 @@
     {/each}
   </nav>
 
-  <div class="grid grid-cols-2 gap-5">
+  <div class="grid grid-cols-2 gap-5 px-5 ">
     {#each $page.data.products as product, index}
       {#key product}
         <ProductBox data={product} {index} />

@@ -23,7 +23,6 @@
 
   function handleGesture() {
     if (touchendX < touchstartX) {
-      console.log('Swiped left');
       if (selectedIndex < BANNERS.length - 1) {
         selectedIndex += 1;
       }

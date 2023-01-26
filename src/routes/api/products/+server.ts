@@ -48,7 +48,6 @@ const PRODUCTS: Array<any> = [
 export const GET: RequestHandler = async ({ url }) => {
   const category = await url.searchParams.get('category');
 
-  console.log(category);
   const filtered = PRODUCTS.filter((product) => {
     return product.categories.includes(category);
   });
