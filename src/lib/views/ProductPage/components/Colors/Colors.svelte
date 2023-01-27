@@ -1,13 +1,21 @@
+<script lang="ts">
+  import { page } from '$app/stores';
+
+  const addQuery = (color) => {
+    $page.url.searchParams.set('color', color);
+  };
+</script>
+
 <div class="flex flex-col items-end gap-2">
   <span class="text-sm font-bold">Colour</span>
 
   <div class="flex flex-col items-start gap-3">
     <button class="color-btn">
-      <div class="red" />
+      <div class="red" on:click={() => addQuery('red')} />
     </button>
 
     <button class="color-btn">
-      <div class="blue" />
+      <div class="blue" on:click={() => addQuery('blue')} />
     </button>
   </div>
 </div>

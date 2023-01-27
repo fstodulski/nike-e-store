@@ -18,7 +18,7 @@
         <Sizes />
       </div>
 
-      <div class="col-start-2 col-end-4 items-center flex ">
+      <div class="col-start-2 col-end-4 items-center flex pointer-events-none">
         <figure class="w-full flex justify-center relative ">
           <img
             class="scale-[2.4] -rotate-[10deg] absolute inset-x-0 inset-y-0"

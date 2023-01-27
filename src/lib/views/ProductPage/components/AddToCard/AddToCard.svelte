@@ -8,13 +8,9 @@
 
   let button: HTMLElement;
 
-  let Y: number;
+  let Y = 0;
 
   const addToCard = () => {
-    setTimeout(() => {
-      button.style.translate = '0px 0px';
-    }, 200);
-
     CartStore.update((store) => {
       return [...store, $page.data.product];
     });
@@ -30,12 +26,15 @@
         class="inline-flex flex-col bg-black text-white p-3 rounded-full gap-4 duration-300"
         bind:this={button}
         on:neodrag:end={addToCard}
+        on:neodrag={(e) => {
+          Y = e.detail.offsetY;
+        }}
+        on:neodrag:end={() => {
+          Y = 0;
+        }}
         use:draggable={{
           axis: 'y',
-          recomputeBounds: { dragStart: false, drag: false, dragEnd: false },
-          transform: ({ offsetY, rootNode }) => {
-            rootNode.style.translate = `0px ${offsetY}px`;
-          }
+          position: { y: Y, x: 0 }
         }}
       >
         <Icon src={ShoppingBag} size="24px" />
