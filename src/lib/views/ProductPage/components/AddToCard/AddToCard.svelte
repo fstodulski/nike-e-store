@@ -8,8 +8,12 @@
 
   let button: HTMLElement;
 
+  let Y: number;
+
   const addToCard = () => {
-    button.style.translate = '0px 0px';
+    setTimeout(() => {
+      button.style.translate = '0px 0px';
+    }, 200);
 
     CartStore.update((store) => {
       return [...store, $page.data.product];
@@ -28,8 +32,9 @@
         on:neodrag:end={addToCard}
         use:draggable={{
           axis: 'y',
+          recomputeBounds: { dragStart: false, drag: false, dragEnd: false },
           transform: ({ offsetY, rootNode }) => {
-            if (offsetY < 20) rootNode.style.translate = `0px ${offsetY}px`;
+            rootNode.style.translate = `0px ${offsetY}px`;
           }
         }}
       >
